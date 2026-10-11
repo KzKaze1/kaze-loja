@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: SEU-USUARIO/SEU-REPOSITORIO   # TROQUE: usuário/repositório do GitHub
+  repo: KzKaze1/kaze-loja   # TROQUE: usuário/repositório do GitHub
   branch: main
 media_folder: images/uploads
 public_folder: /images/uploads
