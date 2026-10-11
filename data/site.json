@@ -28,12 +28,13 @@
       "price": 107.07,
       "name": "Moletom Hoodie Cabo P10",
       "promo": 0,
-      "imgs": [],
-      "colors": [
-        "Preto",
-        "Branco"
+      "imgs": [
+        "/images/uploads/moletom-kaze.webp"
       ],
-      "desc": "Modelagem oversized. Estampa autoral Cabo P10. [DESCRIÇÃO DEMONSTRATIVA]",
+      "colors": [
+        "Preto"
+      ],
+      "desc": "Moletom Hoodie cabos p10 cor preta, estampa frente",
       "sizes": [
         "P",
         "M",
@@ -45,19 +46,24 @@
       "cat": "Moletons",
       "novo": true,
       "link": "https://loppi.com.br/products/moletom-hoodie-cabos-p10-moletom-premium",
-      "id": "cabo-p10"
+      "id": "moletom-cabo-p10"
     },
     {
       "col": "Demonstrativa 01",
-      "price": 0,
-      "name": "Camiseta — Pick in Motion",
+      "price": 55.57,
+      "name": "Camiseta Oversized Trevo De Palhetas",
       "promo": 0,
-      "imgs": [],
+      "imgs": [
+        "/images/uploads/trevo-de-palhetas.webp",
+        "/images/uploads/trevo-de-palhetas-costas.webp"
+      ],
       "colors": [
         "Preto",
-        "Branco"
+        "Branco",
+        "Chocolate",
+        "Off-withe"
       ],
-      "desc": "Estampa autoral Pick in Motion. [DESCRIÇÃO DEMONSTRATIVA]",
+      "desc": "Camiseta Oversized Trevo De Palhetas frente e costas",
       "sizes": [
         "P",
         "M",
@@ -68,8 +74,8 @@
       "stock": true,
       "cat": "Camisetas",
       "novo": true,
-      "link": "",
-      "id": "pick-in-motion"
+      "link": "https://loppi.com.br/products/camiseta-oversized-trevo-de-palhetas-camiseta-oversized-classic",
+      "id": "oversized-trevo-de-palhetas"
     },
     {
       "col": "Demonstrativa 01",
