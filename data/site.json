@@ -20,11 +20,12 @@
     "Moletons"
   ],
   "cols": [
-    "Demonstrativa 01"
+    "P10",
+    "Palhetas"
   ],
   "products": [
     {
-      "col": "Demonstrativa 01",
+      "col": "P10",
       "price": 107.07,
       "name": "Moletom Hoodie Cabo P10",
       "promo": 0,
@@ -49,7 +50,7 @@
       "id": "moletom-cabo-p10"
     },
     {
-      "col": "Demonstrativa 01",
+      "col": "Palhetas",
       "price": 55.57,
       "name": "Camiseta Oversized Trevo De Palhetas",
       "promo": 0,
@@ -78,16 +79,18 @@
       "id": "oversized-trevo-de-palhetas"
     },
     {
-      "col": "Demonstrativa 01",
-      "price": 0,
-      "name": "Camiseta — KaZe Picks",
+      "col": "P10",
+      "price": 55.57,
+      "name": "Camiseta Oversized Cabo P10",
       "promo": 0,
-      "imgs": [],
+      "imgs": [
+        "/images/uploads/fe5d90d5-10e0-4721-aae7-1b092cb0049e.webp"
+      ],
       "colors": [
         "Preto",
-        "Branco"
+        "Chocolate"
       ],
-      "desc": "Estampa autoral KaZe Picks. [DESCRIÇÃO DEMONSTRATIVA]",
+      "desc": "Camiseta Oversized Cabo P10 frente",
       "sizes": [
         "P",
         "M",
@@ -97,9 +100,9 @@
       "feat": true,
       "stock": true,
       "cat": "Camisetas",
-      "novo": false,
-      "link": "",
-      "id": "kaze-picks"
+      "novo": true,
+      "link": "https://loppi.com.br/products/camiseta-oversized-cabo-p10-camiseta-oversized-classic",
+      "id": "camiseta-oversized-cabo-p10"
     }
   ]
 }
