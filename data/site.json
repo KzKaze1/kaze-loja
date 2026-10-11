@@ -4,7 +4,7 @@
     "cnpj": "[PREENCHER] CNPJ / razão social",
     "heroText": "Estampas autorais desenhadas por uma pessoa só, entre cabos, palhetas e músicas, personalidade",
     "heroImg": "/images/uploads/colagem-grunge-kaze-com-guitarra-e-skate.png",
-    "spText": "Para músicos",
+    "spText": "DE MÚSICOS PARA MÚSICOS DE TODOS OS ESTILOS, VISTA SEU SOM",
     "addr": "[PREENCHER] endereço do fornecedor",
     "prazo": "[PREENCHER] prazo de produção e entrega (confirmar com a YouDraw)",
     "spProd": "cabo-p10",
@@ -84,7 +84,8 @@
       "name": "Camiseta Oversized Cabo P10",
       "promo": 0,
       "imgs": [
-        "/images/uploads/fe5d90d5-10e0-4721-aae7-1b092cb0049e.webp"
+        "/images/uploads/fe5d90d5-10e0-4721-aae7-1b092cb0049e.webp",
+        "https://loppi.com.br/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0682%2F4473%2F4146%2Ffiles%2Fcaed5d3b-6729-41ee-a546-6e2798349eeb.png%3Fv%3D1791724880&w=750&q=75"
       ],
       "colors": [
         "Preto",
@@ -102,7 +103,7 @@
       "cat": "Camisetas",
       "novo": true,
       "link": "https://loppi.com.br/products/camiseta-oversized-cabo-p10-camiseta-oversized-classic",
-      "id": "camiseta-oversized-cabo-p10"
+      "id": "oversized-cabo-p10"
     }
   ]
 }
