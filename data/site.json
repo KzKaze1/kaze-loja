@@ -1,0 +1,99 @@
+{
+ "settings": {
+  "symbol": "",
+  "heroTitle": "Toque o que é seu",
+  "heroText": "Estampas autorais desenhadas por uma pessoa só, entre palhetas, shapes de skate e fita adesiva. [TEXTO DEMONSTRATIVO — edite no painel]",
+  "heroImg": "",
+  "heroTag": "Coleção demonstrativa",
+  "aboutText": "A KaZe é uma marca independente de roupas. Cada estampa nasce de um desenho original. [TEXTO DEMONSTRATIVO — conte aqui a sua história]",
+  "spTitle": "Cabo P10",
+  "spText": "Destaque editável: use esta área para uma estampa ou coleção especial. [DEMONSTRATIVO]",
+  "spProd": "cabo-p10",
+  "email": "[PREENCHER] e-mail de contato",
+  "insta": "[PREENCHER] @instagram",
+  "cnpj": "[PREENCHER] CNPJ / razão social",
+  "addr": "[PREENCHER] endereço do fornecedor",
+  "prazo": "[PREENCHER] prazo de produção e entrega (confirmar com a YouDraw)"
+ },
+ "cats": [
+  "Camisetas",
+  "Moletons"
+ ],
+ "cols": [
+  "Demonstrativa 01"
+ ],
+ "products": [
+  {
+   "id": "cabo-p10",
+   "name": "Camiseta Oversized — Cabo P10",
+   "desc": "Modelagem oversized. Estampa autoral Cabo P10. [DESCRIÇÃO DEMONSTRATIVA]",
+   "price": 0,
+   "promo": 0,
+   "cat": "Camisetas",
+   "col": "Demonstrativa 01",
+   "imgs": [],
+   "colors": [
+    "Preto",
+    "Branco"
+   ],
+   "sizes": [
+    "P",
+    "M",
+    "G",
+    "GG"
+   ],
+   "stock": true,
+   "link": "",
+   "feat": true,
+   "novo": true
+  },
+  {
+   "id": "pick-in-motion",
+   "name": "Camiseta — Pick in Motion",
+   "desc": "Estampa autoral Pick in Motion. [DESCRIÇÃO DEMONSTRATIVA]",
+   "price": 0,
+   "promo": 0,
+   "cat": "Camisetas",
+   "col": "Demonstrativa 01",
+   "imgs": [],
+   "colors": [
+    "Preto",
+    "Branco"
+   ],
+   "sizes": [
+    "P",
+    "M",
+    "G",
+    "GG"
+   ],
+   "stock": true,
+   "link": "",
+   "feat": true,
+   "novo": true
+  },
+  {
+   "id": "kaze-picks",
+   "name": "Camiseta — KaZe Picks",
+   "desc": "Estampa autoral KaZe Picks. [DESCRIÇÃO DEMONSTRATIVA]",
+   "price": 0,
+   "promo": 0,
+   "cat": "Camisetas",
+   "col": "Demonstrativa 01",
+   "imgs": [],
+   "colors": [
+    "Preto",
+    "Branco"
+   ],
+   "sizes": [
+    "P",
+    "M",
+    "G",
+    "GG"
+   ],
+   "stock": true,
+   "link": "",
+   "feat": true,
+   "novo": false
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+backend:
+  name: github
+  repo: SEU-USUARIO/SEU-REPOSITORIO   # TROQUE: usuário/repositório do GitHub
+  branch: main
+media_folder: images/uploads
+public_folder: /images/uploads
+locale: pt
+collections:
+  - name: loja
+    label: Loja KaZe
+    files:
+      - name: dados
+        label: Produtos, textos e categorias
+        file: data/site.json
+        fields:
+          - label: Textos e dados da loja
+            name: settings
+            widget: object
+            fields:
+              - {label: Símbolo da marca, name: symbol, widget: image, required: false}
+              - {label: Título do banner, name: heroTitle, widget: string}
+              - {label: Texto do banner, name: heroText, widget: text}
+              - {label: Etiqueta do banner, name: heroTag, widget: string}
+              - {label: Imagem do banner, name: heroImg, widget: image, required: false}
+              - {label: Texto sobre a marca, name: aboutText, widget: text}
+              - {label: Destaque especial - título, name: spTitle, widget: string}
+              - {label: Destaque especial - texto, name: spText, widget: text}
+              - {label: Destaque especial - identificador do produto, name: spProd, widget: string}
+              - {label: E-mail de contato, name: email, widget: string}
+              - {label: Instagram, name: insta, widget: string}
+              - {label: CNPJ / razão social, name: cnpj, widget: string}
+              - {label: Endereço do fornecedor, name: addr, widget: string}
+              - {label: Prazos de produção e entrega, name: prazo, widget: text}
+          - {label: Categorias, name: cats, widget: list, field: {label: Categoria, name: c, widget: string}}
+          - {label: Coleções, name: cols, widget: list, field: {label: Coleção, name: c, widget: string}}
+          - label: Produtos
+            name: products
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - {label: Nome, name: name, widget: string}
+              - {label: Identificador (minúsculas, sem espaços, ex. cabo-p10), name: id, widget: string, pattern: ['^[a-z0-9-]+$', 'Use só letras minúsculas, números e hífen']}
+              - {label: Descrição, name: desc, widget: text}
+              - {label: Preço (R$), name: price, widget: number, value_type: float, min: 0, default: 0}
+              - {label: Preço promocional (0 = sem promoção), name: promo, widget: number, value_type: float, min: 0, default: 0}
+              - {label: Categoria, name: cat, widget: string}
+              - {label: Coleção, name: col, widget: string}
+              - {label: "Imagens (ordem: frente, costas, estampa ampliada, mockup)", name: imgs, widget: list, required: false, field: {label: Imagem, name: i, widget: image}}
+              - {label: Cores, name: colors, widget: list, field: {label: Cor, name: c, widget: string}}
+              - {label: Tamanhos, name: sizes, widget: list, field: {label: Tamanho, name: s, widget: string}}
+              - {label: Disponível, name: stock, widget: boolean, default: true}
+              - {label: Link externo de compra (https://...), name: link, widget: string, required: false}
+              - {label: Em destaque na página inicial, name: feat, widget: boolean, default: false}
+              - {label: Novidade, name: novo, widget: boolean, default: false}

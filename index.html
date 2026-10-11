@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KaZe — roupas autorais</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--fg:#111;--mut:#6b6b6b;--line:#111;--soft:#ececec;--ac:#2b2bff;--onac:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#101010;--fg:#f2f2f2;--mut:#a0a0a0;--line:#f2f2f2;--soft:#242424;--ac:#7b7bff;--onac:#101010}}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 'Work Sans',system-ui,sans-serif}
+h1,h2,h3,.d{font-family:Anton,Impact,'Arial Narrow',sans-serif;font-weight:400;line-height:1;margin:0;letter-spacing:.01em}
+a{color:inherit}button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.w{max-width:1160px;margin:0 auto;padding:0 20px}
+header{border-bottom:2px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5}
+.hd{display:flex;align-items:center;gap:16px;padding:10px 20px;max-width:1160px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo .d{font-size:30px}.sym{width:34px;height:34px;border:2px dashed var(--mut);display:grid;place-items:center;font-size:9px;color:var(--mut);text-align:center;line-height:1;overflow:hidden}
+.sym img{width:100%;height:100%;object-fit:contain}
+nav{display:flex;gap:18px;margin-left:12px}nav a{text-decoration:none;font-weight:600}nav a:hover{color:var(--ac)}
+.sp{flex:1}
+.ib{background:none;border:2px solid var(--line);padding:6px 12px;cursor:pointer;font-weight:600}
+.ib:hover{background:var(--fg);color:var(--bg)}
+#q{border:2px solid var(--line);background:var(--bg);padding:6px 10px;width:150px}
+#mb{display:none}
+@media(max-width:760px){nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px 20px;border-bottom:2px solid var(--line);margin:0}nav.open{display:flex}#mb{display:block}#q{width:90px}}
+.btn{display:inline-block;background:var(--ac);color:var(--onac);border:2px solid var(--line);padding:12px 24px;font-weight:600;text-decoration:none;cursor:pointer;box-shadow:4px 4px 0 var(--line)}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--line)}
+.btn.o{background:var(--bg);color:var(--fg)}.btn[disabled],.btn.off{opacity:.45;pointer-events:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;padding:48px 20px;align-items:center}
+.hero h1{font-size:clamp(64px,13vw,170px);text-transform:uppercase;line-height:.88}
+.hero p{max-width:44ch;font-size:18px}
+.col{position:relative;min-height:380px}
+.ph{background:repeating-linear-gradient(135deg,var(--soft) 0 10px,transparent 10px 20px);border:2px solid var(--line);display:grid;place-items:center;text-align:center;padding:10px;color:var(--mut);font-size:13px;position:relative;overflow:hidden;width:100%;height:100%}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.col .a{position:absolute;width:62%;aspect-ratio:3/4;right:0;top:0;transform:rotate(3deg)}
+.col .b{position:absolute;width:48%;aspect-ratio:1;left:0;bottom:0;transform:rotate(-4deg);background:var(--ac);color:var(--onac);border:2px solid var(--line);display:grid;place-items:center;text-align:center;padding:12px}
+.tape{position:absolute;width:90px;height:26px;background:rgba(150,150,150,.55);top:-12px;left:30%;transform:rotate(-6deg);z-index:2}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:28px}.col{min-height:320px}}
+section{padding:40px 0}
+.sh{display:flex;justify-content:space-between;align-items:end;margin-bottom:22px;gap:12px;flex-wrap:wrap}
+.sh h2{font-size:clamp(34px,5vw,52px);text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.card{display:flex;flex-direction:column;gap:8px}
+.card .im{aspect-ratio:4/5;display:block;text-decoration:none}
+.card h3{font-family:'Work Sans';font-weight:600;font-size:17px;line-height:1.25}
+.pr s{color:var(--mut);margin-right:6px}.pr b{color:var(--ac)}
+.dot{display:inline-block;width:14px;height:14px;border:1px solid var(--line);border-radius:50%;margin-right:3px;vertical-align:middle}
+.tag{background:var(--fg);color:var(--bg);font-size:12px;padding:2px 8px;display:inline-block;font-weight:600}
+.band{background:var(--fg);color:var(--bg)}.band .btn{border-color:var(--bg);box-shadow:4px 4px 0 var(--bg)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.cats a{border:2px solid var(--line);padding:22px;text-decoration:none;font-family:Anton,Impact,sans-serif;font-size:28px;text-transform:uppercase}
+.cats a:hover{background:var(--ac);color:var(--onac)}
+footer{border-top:2px solid var(--line);padding:36px 0;margin-top:40px;font-size:14px}
+footer .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+footer a{display:block;margin:4px 0}
+.fl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.fl select{padding:8px;border:2px solid var(--line);background:var(--bg)}
+.pg{display:grid;grid-template-columns:1.1fr .9fr;gap:36px}
+@media(max-width:760px){.pg{grid-template-columns:1fr}}
+.main{aspect-ratio:4/5;cursor:zoom-in}.th{display:flex;gap:8px;margin-top:8px}.th button{width:64px;height:80px;padding:0;border:2px solid var(--line);background:none;cursor:pointer;overflow:hidden}.th button[aria-current=true]{outline:3px solid var(--ac)}
+.th img{width:100%;height:100%;object-fit:cover}
+.ch{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 16px}
+.ch button{border:2px solid var(--line);background:var(--bg);padding:6px 14px;cursor:pointer;font-weight:600}
+.ch button[aria-pressed=true]{background:var(--fg);color:var(--bg)}
+details{border-top:1px solid var(--line);padding:10px 0}summary{cursor:pointer;font-weight:600}
+.row{display:grid;grid-template-columns:80px 1fr auto;gap:14px;border-bottom:1px solid var(--soft);padding:14px 0;align-items:center}
+.qty{display:inline-flex;border:2px solid var(--line)}.qty button{border:0;background:none;width:34px;cursor:pointer;font-size:18px}.qty span{min-width:34px;text-align:center;line-height:34px}
+.warn{border:2px dashed var(--ac);padding:12px 16px;margin:16px 0;font-size:14px}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;place-items:center;z-index:20;padding:20px}#lb.on{display:grid}#lb .ph{max-width:560px;max-height:90vh;aspect-ratio:4/5;width:auto;height:90vh}
+#toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 18px;display:none;z-index:30}
+.ad label{display:block;font-size:13px;font-weight:600;margin-top:10px}
+.ad input,.ad textarea,.ad select{width:100%;padding:8px;border:2px solid var(--line);background:var(--bg)}
+.ad .ps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px 18px}
+.ov{overflow-x:auto}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:in .5s ease-out}@keyframes in{from{opacity:0;transform:translateY(14px)}}.btn{transition:.1s}}
+</style></head><body>
+<a href="#main" class="btn" style="position:absolute;left:-999px" onfocus="this.style.left='8px'" onblur="this.style.left='-999px'">Ir ao conteúdo</a>
+<header><div class="hd">
+<a class="logo" href="#/" aria-label="KaZe — início"><span class="sym" id="sym">seu símbolo</span><span class="d">KaZe</span></a>
+<nav id="nav" aria-label="Principal"><a href="#/loja">Loja</a><a href="#/loja?novo=1">Novidades</a><a href="#/pagina/sobre">Sobre</a><a href="#/pagina/contato">Contato</a></nav>
+<span class="sp"></span>
+<input id="q" type="search" placeholder="Buscar" aria-label="Buscar produtos">
+<a class="ib" href="#/favoritos" aria-label="Favoritos">♡ <span id="fc">0</span></a>
+<a class="ib" href="#/carrinho" aria-label="Carrinho">Carrinho <span id="cc">0</span></a>
+<button class="ib" id="mb" aria-label="Menu" aria-expanded="false">☰</button>
+</div></header>
+<main id="main" tabindex="-1"></main>
+<footer><div class="w g" id="ft"></div></footer>
+<div id="lb" role="dialog" aria-label="Imagem ampliada"></div><div id="toast" role="status"></div>
+<script>
+const P='[PREENCHER]';
+const DEF={
+ settings:{symbol:'',heroTitle:'Toque o que é seu',heroText:'Estampas autorais desenhadas por uma pessoa só, entre palhetas, shapes de skate e fita adesiva. [TEXTO DEMONSTRATIVO — edite no painel]',heroImg:'',heroTag:'Coleção demonstrativa',
+ aboutText:'A KaZe é uma marca independente de roupas. Cada estampa nasce de um desenho original. [TEXTO DEMONSTRATIVO — conte aqui a sua história]',
+ spTitle:'Cabo P10',spText:'Destaque editável: use esta área para uma estampa ou coleção especial. [DEMONSTRATIVO]',spProd:'cabo-p10',
+ email:P+' e-mail de contato',insta:P+' @instagram',cnpj:P+' CNPJ / razão social',addr:P+' endereço do fornecedor',prazo:P+' prazo de produção e entrega (confirmar com a YouDraw)'},
+ cats:['Camisetas','Moletons'],cols:['Demonstrativa 01'],
+ products:[
+ {id:'cabo-p10',name:'Camiseta Oversized — Cabo P10',desc:'Modelagem oversized. Estampa autoral Cabo P10. [DESCRIÇÃO DEMONSTRATIVA]',price:0,promo:0,cat:'Camisetas',col:'Demonstrativa 01',imgs:[],colors:['Preto','Branco'],sizes:['P','M','G','GG'],stock:true,link:'',feat:true,novo:true},
+ {id:'pick-in-motion',name:'Camiseta — Pick in Motion',desc:'Estampa autoral Pick in Motion. [DESCRIÇÃO DEMONSTRATIVA]',price:0,promo:0,cat:'Camisetas',col:'Demonstrativa 01',imgs:[],colors:['Preto','Branco'],sizes:['P','M','G','GG'],stock:true,link:'',feat:true,novo:true},
+ {id:'kaze-picks',name:'Camiseta — KaZe Picks',desc:'Estampa autoral KaZe Picks. [DESCRIÇÃO DEMONSTRATIVA]',price:0,promo:0,cat:'Camisetas',col:'Demonstrativa 01',imgs:[],colors:['Preto','Branco'],sizes:['P','M','G','GG'],stock:true,link:'',feat:true,novo:false}]};
+const PAGES={
+ sobre:['Sobre a KaZe',()=>`<p>${esc(D.settings.aboutText)}</p>`],
+ contato:['Contato',()=>`<p>E-mail: ${esc(D.settings.email)}</p><p>Instagram: ${esc(D.settings.insta)}</p>`],
+ faq:['Perguntas frequentes',()=>`<details open><summary>Como compro?</summary><p>Escolha cor e tamanho e siga para o checkout externo do produto.</p></details><details><summary>Quem produz?</summary><p>Produção sob demanda. ${esc(D.settings.prazo)}</p></details><p>[PREENCHER: demais perguntas]</p>`],
+ entrega:['Entrega e prazos',()=>`<p>${esc(D.settings.prazo)}</p><p>[PREENCHER: transportadora, rastreio, frete]</p>`],
+ trocas:['Trocas e devoluções',()=>`<p>[PREENCHER: política oficial.] Verifique o direito de arrependimento de 7 dias (CDC, art. 49) para compras online e as regras do fornecedor.</p>`],
+ privacidade:['Política de privacidade',()=>`<p>[PREENCHER: política conforme a LGPD — quais dados são coletados, por quê, e como pedir exclusão.] Este site guarda apenas carrinho e favoritos no seu navegador. Nenhum dado de cartão passa por aqui.</p>`],
+ termos:['Termos de uso',()=>`<p>[PREENCHER: termos de uso, revisados por profissional jurídico.]</p>`],
+ pagamentos:['Compras e pagamentos',()=>`<p>O pagamento é feito em um checkout externo, fora deste site. Formas de pagamento e taxas dependem do provedor escolhido. [PREENCHER]</p><p>Fornecedor: ${esc(D.settings.cnpj)} — ${esc(D.settings.addr)}</p>`]};
+let D=DEF;
+let cart=[],fav=[];try{cart=JSON.parse(localStorage.getItem('kaze_cart'))||[];fav=JSON.parse(localStorage.getItem('kaze_fav'))||[]}catch(e){}
+const $=s=>document.querySelector(s);
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+const brl=n=>n>0?Number(n).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}):'Preço a definir';
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){toast('Não foi possível salvar neste navegador.')}}
+function toast(t){const e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display='none',2200)}
+const eff=p=>p.promo>0&&p.promo<p.price?p.promo:p.price;
+const price=p=>p.promo>0&&p.promo<p.price?`<span class="pr"><s>${brl(p.price)}</s><b>${brl(p.promo)}</b></span>`:`<span class="pr">${brl(p.price)}</span>`;
+const hex={preto:'#111',branco:'#fff',cinza:'#888',azul:'#2b2bff',vermelho:'#d22',verde:'#2a7'};
+const dots=p=>p.colors.map(c=>`<span class="dot" title="${esc(c)}" style="background:${hex[c.toLowerCase()]||'#bbb'}"></span>`).join('');
+const img=(src,label)=>`<div class="ph">${src?`<img src="${esc(src)}" alt="${esc(label)}" loading="lazy">`:`<span>${esc(label)}<br>[espaço para sua imagem]</span>`}</div>`;
+function card(p){const f=fav.includes(p.id);return `<article class="card"><a class="im" href="#/produto/${esc(p.id)}" aria-label="${esc(p.name)}">${img(p.imgs[0],p.name)}</a>${!p.stock?'<span class="tag">Indisponível</span>':''}<h3><a href="#/produto/${esc(p.id)}" style="text-decoration:none">${esc(p.name)}</a></h3><div>${price(p)}</div><div>${dots(p)}</div><div><a class="btn o" style="padding:6px 14px;box-shadow:none" href="#/produto/${esc(p.id)}">Ver detalhes</a> <button class="ib" data-fav="${esc(p.id)}" aria-pressed="${f}" aria-label="Favoritar">${f?'♥':'♡'}</button></div></article>`}
+function grid(l){return l.length?`<div class="grid">${l.map(card).join('')}</div>`:`<p>Nenhum produto encontrado. <a href="#/loja">Ver todos</a></p>`}
+function chrome(){$('#cc').textContent=cart.reduce((a,i)=>a+i.q,0);$('#fc').textContent=fav.length;const s=D.settings.symbol;$('#sym').innerHTML=s?`<img src="${esc(s)}" alt="">`:'seu símbolo';
+ $('#ft').innerHTML=`<div><div class="d" style="font-size:28px">KaZe</div><p>${esc(D.settings.email)}<br>${esc(D.settings.insta)}</p></div><div><b>Loja</b>${D.cats.map(c=>`<a href="#/loja?cat=${encodeURIComponent(c)}">${esc(c)}</a>`).join('')}</div><div><b>Ajuda</b>${['faq','entrega','trocas','pagamentos'].map(k=>`<a href="#/pagina/${k}">${PAGES[k][0]}</a>`).join('')}</div><div><b>Institucional</b>${['sobre','contato','privacidade','termos'].map(k=>`<a href="#/pagina/${k}">${PAGES[k][0]}</a>`).join('')}<a href="/admin/">Administração</a></div><div style="grid-column:1/-1;color:var(--mut)">${esc(D.settings.cnpj)} · ${esc(D.settings.addr)}</div>`}
+const V={
+home(){const s=D.settings,f=D.products.filter(p=>p.feat),n=D.products.filter(p=>p.novo),sp=D.products.find(p=>p.id===s.spProd);
+ return `<div class="w hero"><div><span class="tag">${esc(s.heroTag)}</span><h1 style="margin:14px 0">${esc(s.heroTitle)}</h1><p>${esc(s.heroText)}</p><a class="btn" href="#/loja">Ver a loja</a></div><div class="col"><div class="a"><span class="tape"></span>${img(s.heroImg,'Banner da campanha')}</div><div class="b"><span class="d" style="font-size:30px">FEITO<br>EM CASA<br>E NA RUA</span></div></div></div>
+ <section><div class="w"><div class="sh"><h2>Em destaque</h2><a href="#/loja">Ver tudo</a></div>${grid(f)}</div></section>
+ <section class="band"><div class="w two"><div><h2 style="font-size:48px">${esc(s.spTitle)}</h2><p>${esc(s.spText)}</p>${sp?`<a class="btn" href="#/produto/${esc(sp.id)}">Ver produto</a>`:''}</div>${img(sp&&sp.imgs[0],s.spTitle)}</div></section>
+ <section><div class="w"><div class="sh"><h2>Novidades</h2><a href="#/loja?novo=1">Ver todas</a></div>${grid(n)}</div></section>
+ <section><div class="w two"><div><h2 style="font-size:44px;text-transform:uppercase">Marca independente</h2><p>${esc(s.aboutText)}</p><a href="#/pagina/sobre">Conheça a KaZe</a></div><div class="cats">${D.cats.map(c=>`<a href="#/loja?cat=${encodeURIComponent(c)}">${esc(c)}</a>`).join('')}</div></div></section>`},
+loja(q){let l=D.products.filter(p=>(!q.cat||p.cat===q.cat)&&(!q.size||p.sizes.includes(q.size))&&(!q.color||p.colors.includes(q.color))&&(!q.novo||p.novo)&&(!q.col||p.col===q.col)&&(!q.q||(p.name+p.desc+p.cat+p.col).toLowerCase().includes(q.q.toLowerCase())));
+ const all=k=>[...new Set(D.products.flatMap(p=>[].concat(p[k])))];const sel=(n,lab,o)=>`<select data-f="${n}" aria-label="${lab}"><option value="">${lab}</option>${o.map(x=>`<option ${q[n]===x?'selected':''}>${esc(x)}</option>`).join('')}</select>`;
+ return `<div class="w"><section><div class="sh"><h2>${q.novo?'Novidades':'Loja'}</h2><span>${l.length} produto(s)</span></div><div class="fl">${sel('cat','Categoria',D.cats)}${sel('size','Tamanho',all('sizes'))}${sel('color','Cor',all('colors'))}${sel('col','Coleção',D.cols)}</div>${grid(l)}</section></div>`},
+produto(id){const p=D.products.find(x=>x.id===id);if(!p)return `<div class="w"><section><h2>Produto não encontrado</h2><p>Este link não existe mais. <a href="#/loja">Voltar à loja</a></p></section></div>`;
+ const labels=['Frente','Costas','Estampa ampliada','Mockup vestido'];const imgs=[0,1,2,3].map(i=>[p.imgs[i],p.name+' — '+labels[i]]);
+ const rel=D.products.filter(x=>x.id!==p.id&&x.cat===p.cat).slice(0,4);
+ return `<div class="w"><section><div class="pg"><div><div class="main" id="mainimg" data-i="0">${img(imgs[0][0],imgs[0][1])}</div><div class="th">${imgs.map((m,i)=>`<button data-th="${i}" aria-label="${labels[i]}" aria-current="${i==0}">${m[0]?`<img src="${esc(m[0])}" alt="">`:'<span style="font-size:10px">'+labels[i]+'</span>'}</button>`).join('')}</div><p style="font-size:12px;color:var(--mut)">Imagens ausentes aparecem como espaço reservado. Mockups devem ser identificados como mockup.</p></div>
+ <div><span class="tag">${esc(p.col)}</span><h1 style="font-size:44px;margin:10px 0;text-transform:uppercase">${esc(p.name)}</h1><div style="font-size:22px">${price(p)}</div><p>${esc(p.desc)}</p>
+ <b>Cor</b><div class="ch" id="cs">${p.colors.map((c,i)=>`<button aria-pressed="${i==0}" data-v="${esc(c)}">${esc(c)}</button>`).join('')}</div>
+ <b>Tamanho</b><div class="ch" id="ss">${p.sizes.map(c=>`<button aria-pressed="false" data-v="${esc(c)}">${esc(c)}</button>`).join('')}</div>
+ <b>Quantidade</b> <input id="qt" type="number" min="1" max="20" value="1" style="width:70px;padding:6px;border:2px solid var(--line);background:var(--bg)"><br><br>
+ ${p.stock?`<button class="btn" id="add">Adicionar ao carrinho</button>`:`<button class="btn" disabled>Indisponível</button>`}
+ <button class="ib" data-fav="${esc(p.id)}" aria-pressed="${fav.includes(p.id)}">${fav.includes(p.id)?'♥':'♡'} Favorito</button>
+ <div style="margin-top:22px"><details><summary>Produção</summary><p>Produção sob demanda. ${esc(D.settings.prazo)}</p></details><details><summary>Entrega</summary><p><a href="#/pagina/entrega">Ver entrega e prazos</a></p></details><details><summary>Trocas</summary><p><a href="#/pagina/trocas">Ver trocas e devoluções</a></p></details></div></div></div></section>
+ ${rel.length?`<section><div class="sh"><h2>Relacionados</h2></div>${grid(rel)}</section>`:''}</div>`},
+carrinho(){if(!cart.length)return `<div class="w"><section><h2>Carrinho vazio</h2><p>Escolha uma camiseta e ela aparece aqui.</p><a class="btn" href="#/loja">Ir para a loja</a></section></div>`;
+ let sub=0,rows=cart.map((it,i)=>{const p=D.products.find(x=>x.id===it.id);if(!p)return '';sub+=eff(p)*it.q;return `<div class="row"><div style="width:80px;aspect-ratio:4/5">${img(p.imgs[0],'')}</div><div><b>${esc(p.name)}</b><br>${esc(it.c)} · ${esc(it.s)}<br>${price(p)}<br><button class="ib" data-rm="${i}" style="margin-top:6px">Remover</button></div><div class="qty"><button data-q="${i}|-1" aria-label="Diminuir">−</button><span>${it.q}</span><button data-q="${i}|1" aria-label="Aumentar">+</button></div></div>`}).join('');
+ const checks=cart.map(it=>D.products.find(x=>x.id===it.id)).filter((p,i,a)=>p&&a.indexOf(p)===i).map(p=>p.link?`<a class="btn" style="margin:4px 0;display:block;text-align:center" target="_blank" rel="noopener" href="${esc(p.link)}">Finalizar: ${esc(p.name)} ↗</a>`:`<p class="warn">${esc(p.name)}: link de compra ainda não configurado (painel → Administração).</p>`).join('');
+ return `<div class="w"><section><h2>Carrinho</h2>${rows}<p style="font-size:20px"><b>Subtotal: ${brl(sub)}</b></p><div class="warn">O pagamento acontece em um checkout externo, produto por produto. Nenhum pagamento é processado neste site. Escolha cor, tamanho e quantidade também na página externa.</div>${checks}<a href="#/loja">Continuar comprando</a></section></div>`},
+favoritos(){return `<div class="w"><section><h2>Favoritos</h2>${fav.length?grid(D.products.filter(p=>fav.includes(p.id))):'<p>Você ainda não favoritou nada. Toque no ♡ em um produto.</p>'}</section></div>`},
+pagina(k){const p=PAGES[k];if(!p)return V.produto('x');return `<div class="w" style="max-width:720px"><section><h1 style="font-size:48px;margin-bottom:18px;text-transform:uppercase">${p[0]}</h1>${p[1]()}</section></div>`},
+admin(){const s=D.settings;const fld=(k,l)=>`<label>${l}<textarea data-s="${k}" rows="2">${esc(s[k])}</textarea></label>`;
+ return `<div class="w ad"><section><h2>Administração</h2><div class="warn"><b>Aviso:</b> este painel não tem senha e salva só no seu navegador. Clientes não veem suas edições até você usar <b>Exportar</b> e atualizar o site (veja as instruções na conversa).</div>
+ <button class="btn" id="exp">Exportar dados (JSON)</button> <label class="btn o" style="display:inline-block;cursor:pointer">Importar JSON<input type="file" id="imp" accept=".json" hidden></label> <button class="btn o" id="rst">Restaurar demo</button>
+ <h3 style="margin-top:30px">Textos e dados da loja</h3><div class="ps">${['heroTitle','heroText','heroTag','aboutText','spTitle','spText','email','insta','cnpj','addr','prazo'].map(k=>fld(k,k)).join('')}<label>Símbolo da marca (imagem)<input type="file" accept="image/*" data-up="symbol"></label><label>Imagem do banner<input type="file" accept="image/*" data-up="heroImg"></label><label>Produto em destaque especial (id)<input data-s="spProd" value="${esc(s.spProd)}"></label></div>
+ <h3 style="margin-top:30px">Categorias e coleções (uma por linha)</h3><div class="ps"><textarea data-l="cats" rows="3">${esc(D.cats.join('\n'))}</textarea><textarea data-l="cols" rows="3">${esc(D.cols.join('\n'))}</textarea></div>
+ <h3 style="margin-top:30px">Produtos</h3><button class="btn" id="np">+ Novo produto</button>
+ ${D.products.map((p,i)=>`<details style="margin-top:12px"><summary>${esc(p.name)} (${esc(p.id)})</summary><div class="ps">${[['name','Nome'],['id','Identificador (sem espaços)'],['price','Preço (R$)'],['promo','Preço promocional (opcional)'],['cat','Categoria'],['col','Coleção'],['colors','Cores (vírgula)'],['sizes','Tamanhos (vírgula)'],['link','Link externo de compra (https://…)']].map(([k,l])=>`<label>${l}<input data-p="${i}|${k}" value="${esc(Array.isArray(p[k])?p[k].join(', '):p[k])}"></label>`).join('')}<label>Descrição<textarea data-p="${i}|desc" rows="3">${esc(p.desc)}</textarea></label>
+ <label><input type="checkbox" style="width:auto" data-c="${i}|stock" ${p.stock?'checked':''}> Disponível</label><label><input type="checkbox" style="width:auto" data-c="${i}|feat" ${p.feat?'checked':''}> Em destaque</label><label><input type="checkbox" style="width:auto" data-c="${i}|novo" ${p.novo?'checked':''}> Novidade</label>
+ ${['Frente','Costas','Estampa ampliada','Mockup'].map((l,j)=>`<label>Imagem: ${l}<input type="file" accept="image/*" data-pi="${i}|${j}"></label>`).join('')}</div><button class="ib" data-del="${i}" style="margin-top:8px">Excluir produto</button></details>`).join('')}</section></div>`}};
+function route(){const h=location.hash.slice(1)||'/';const[pth,qs]=h.split('?');const q=Object.fromEntries(new URLSearchParams(qs||''));const[,r,a]=pth.split('/');let html;
+ try{html=r==='loja'?V.loja(q):r==='produto'?V.produto(decodeURIComponent(a||'')):r==='carrinho'?V.carrinho():r==='favoritos'?V.favoritos():r==='pagina'?V.pagina(a):r==='admin'?V.admin():r?V.produto('x'):V.home()}catch(e){console.error(e);html='<div class="w"><section><h2>Algo deu errado</h2><p>Recarregue a página. Se persistir, restaure a demo em Administração.</p></section></div>'}
+ $('#main').innerHTML=html;chrome();window.scrollTo(0,0);$('#nav').classList.remove('open')}
+function persist(){save('kaze_data',D);chrome()}
+function shrink(f,cb){const r=new FileReader();r.onload=()=>{const i=new Image();i.onload=()=>{const k=Math.min(1,900/i.width),c=document.createElement('canvas');c.width=i.width*k;c.height=i.height*k;c.getContext('2d').drawImage(i,0,0,c.width,c.height);cb(c.toDataURL(f.type==='image/png'?'image/png':'image/jpeg',.82))};i.src=r.result};r.readAsDataURL(f)}
+document.addEventListener('click',e=>{const t=e.target.closest('button,[data-th],#mainimg');if(!t)return;
+ if(t.dataset.fav){const id=t.dataset.fav;fav=fav.includes(id)?fav.filter(x=>x!==id):[...fav,id];save('kaze_fav',fav);route()}
+ else if(t.dataset.th!==undefined){const i=+t.dataset.th,p=D.products.find(x=>x.id===decodeURIComponent(location.hash.split('/')[2]));$('#mainimg').dataset.i=i;$('#mainimg').innerHTML=img(p.imgs[i],p.name);document.querySelectorAll('[data-th]').forEach(b=>b.setAttribute('aria-current',b===t))}
+ else if(t.id==='mainimg'||e.target.closest('#mainimg')){$('#lb').innerHTML=$('#mainimg').innerHTML;$('#lb').classList.add('on')}
+ else if(t.closest('#cs,#ss')){t.parentElement.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b===t))}
+ else if(t.id==='add'){const id=decodeURIComponent(location.hash.split('/')[2]),c=$('#cs [aria-pressed=true]'),s=$('#ss [aria-pressed=true]');if(!s)return toast('Escolha um tamanho.');const q=Math.max(1,Math.min(20,+$('#qt').value||1)),cv=c?c.dataset.v:'-',it=cart.find(x=>x.id===id&&x.c===cv&&x.s===s.dataset.v);it?it.q+=q:cart.push({id,c:cv,s:s.dataset.v,q});save('kaze_cart',cart);chrome();toast('Adicionado ao carrinho')}
+ else if(t.dataset.rm){cart.splice(+t.dataset.rm,1);save('kaze_cart',cart);route()}
+ else if(t.dataset.q){const[i,d]=t.dataset.q.split('|');cart[i].q=Math.max(1,cart[i].q+ +d);save('kaze_cart',cart);route()}
+ else if(t.id==='mb'){const o=$('#nav').classList.toggle('open');t.setAttribute('aria-expanded',o)}
+ else if(t.id==='np'){D.products.push({id:'novo-'+Date.now().toString(36),name:'Novo produto',desc:'',price:0,promo:0,cat:D.cats[0]||'',col:D.cols[0]||'',imgs:[],colors:['Preto'],sizes:['M'],stock:true,link:'',feat:false,novo:true});persist();route()}
+ else if(t.dataset.del){if(confirm('Excluir este produto?')){D.products.splice(+t.dataset.del,1);persist();route()}}
+ else if(t.id==='exp'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D,null,1)],{type:'application/json'}));a.download='kaze-dados.json';a.click()}
+ else if(t.id==='rst'){if(confirm('Apagar edições e voltar à demonstração?')){localStorage.removeItem('kaze_data');D=DEF;route()}}});
+$('#lb').onclick=()=>$('#lb').classList.remove('on');document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#lb').classList.remove('on')});
+document.addEventListener('change',e=>{const t=e.target,d=t.dataset;
+ if(d.f!==undefined){const u=new URLSearchParams(location.hash.split('?')[1]||'');t.value?u.set(d.f,t.value):u.delete(d.f);location.hash='/loja?'+u}
+ else if(d.s){D.settings[d.s]=t.value;persist()}
+ else if(d.l){D[d.l]=t.value.split('\n').map(x=>x.trim()).filter(Boolean);persist()}
+ else if(d.p){const[i,k]=d.p.split('|'),p=D.products[i];p[k]=['price','promo'].includes(k)?+String(t.value).replace(',','.')||0:['colors','sizes'].includes(k)?t.value.split(',').map(x=>x.trim()).filter(Boolean):k==='link'&&t.value&&!/^https?:\/\//.test(t.value)?(toast('O link precisa começar com https://'),''):t.value;persist()}
+ else if(d.c){const[i,k]=d.c.split('|');D.products[i][k]=t.checked;persist()}
+ else if(d.up&&t.files[0]){shrink(t.files[0],u=>{D.settings[d.up]=u;persist();toast('Imagem salva')})}
+ else if(d.pi&&t.files[0]){const[i,j]=d.pi.split('|');shrink(t.files[0],u=>{D.products[i].imgs[j]=u;persist();toast('Imagem salva')})}
+ else if(t.id==='imp'&&t.files[0]){t.files[0].text().then(x=>{try{const n=JSON.parse(x);if(!n.products||!n.settings)throw 0;D=n;persist();route();toast('Dados importados')}catch(_){toast('Arquivo inválido.')}})}});
+$('#q').addEventListener('keydown',e=>{if(e.key==='Enter')location.hash='/loja?q='+encodeURIComponent(e.target.value)});
+addEventListener('hashchange',route);
+fetch('data/site.json').then(r=>r.ok?r.json():Promise.reject()).then(j=>{if(j&&j.products)D=j}).catch(()=>{}).finally(route);
+</script></body></html>

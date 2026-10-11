@@ -1,0 +1,22 @@
+PUBLICAR A KAZE GRATUITAMENTE (GitHub + Netlify)
+
+1. Crie conta gratuita em github.com. Clique em New repository, nome "kaze-loja", Public ou Private.
+2. No repositório: Add file > Upload files. Arraste TODO o conteúdo desta pasta
+   (index.html, admin, data, images...) e clique em Commit changes.
+3. Abra admin/config.yml no GitHub (ícone de lápis) e troque
+   SEU-USUARIO/SEU-REPOSITORIO pelo seu, ex.: maria/kaze-loja. Salve (Commit).
+4. Crie conta em netlify.com (entre com o GitHub). Add new site > Import an existing project > GitHub >
+   kaze-loja. Build command: deixe vazio. Publish directory: deixe vazio (ou "."). Deploy.
+   Você ganha um endereço tipo nome.netlify.app (dá para mudar em Site configuration > Change site name).
+5. Login do painel (uma vez): no Netlify, Site configuration > Access & security > OAuth >
+   Install provider > GitHub. Siga o assistente (ele pede criar um "OAuth App" no GitHub e colar
+   Client ID e Secret). Se o menu estiver diferente, procure por "OAuth" na documentação do Netlify.
+6. Acesse SEU-ENDERECO/admin/ > Login with GitHub. Edite produtos, preços, imagens, links e textos
+   > Publish. Em cerca de 1 minuto o site atualiza para todos.
+
+IMPORTANTE
+- Nunca coloque senhas ou chaves dentro dos arquivos do site.
+- Preencha os campos [PREENCHER] (CNPJ, endereço, e-mail, políticas) antes de vender de verdade.
+- Domínio próprio no futuro: Netlify > Domain management > Add a domain (domínio é pago, ~R$ 40/ano para .com.br; HTTPS é gratuito).
+- Se o Netlify mudar o plano gratuito, a mesma pasta funciona no Cloudflare Pages ou GitHub Pages,
+  mas o login do painel precisa de um pequeno serviço de OAuth (ex.: Cloudflare Worker gratuito).
