@@ -2,18 +2,18 @@
   "settings": {
     "heroTag": "Coleção demonstrativa",
     "cnpj": "[PREENCHER] CNPJ / razão social",
-    "heroText": "Estampas autorais desenhadas por uma pessoa só, entre palhetas, shapes de skate e fita adesiva. [TEXTO DEMONSTRATIVO — edite no painel]",
-    "heroImg": "",
+    "heroText": "Estampas autorais desenhadas por uma pessoa só, entre cabos, palhetas e músicas, personalidade",
+    "heroImg": "/images/uploads/colagem-grunge-kaze-com-guitarra-e-skate.png",
     "spText": "Destaque editável: use esta área para uma estampa ou coleção especial. [DEMONSTRATIVO]",
     "addr": "[PREENCHER] endereço do fornecedor",
     "prazo": "[PREENCHER] prazo de produção e entrega (confirmar com a YouDraw)",
     "spProd": "cabo-p10",
-    "symbol": "",
-    "aboutText": "A KaZe é uma marca independente de roupas. Cada estampa nasce de um desenho original. [TEXTO DEMONSTRATIVO — conte aqui a sua história]",
+    "symbol": "/images/uploads/logo-kaze-com-cabos-distressed.png",
+    "aboutText": "A KaZe é uma marca independente de roupas. Cada estampa nasce de um desenho original. ",
     "spTitle": "Cabo P10",
     "insta": "[PREENCHER] @instagram",
     "email": "[PREENCHER] e-mail de contato",
-    "heroTitle": "Toque o que é seu"
+    "heroTitle": "VISTA-SE COMO MERECE"
   },
   "cats": [
     "Camisetas",
