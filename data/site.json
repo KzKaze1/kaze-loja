@@ -25,8 +25,8 @@
   "products": [
     {
       "col": "Demonstrativa 01",
-      "price": 0,
-      "name": "Camiseta Oversized — Cabo P10",
+      "price": 107.07,
+      "name": "Moletom Hoodie Cabo P10",
       "promo": 0,
       "imgs": [],
       "colors": [
@@ -42,9 +42,9 @@
       ],
       "feat": true,
       "stock": true,
-      "cat": "Camisetas",
+      "cat": "Moletons",
       "novo": true,
-      "link": "",
+      "link": "https://loppi.com.br/products/moletom-hoodie-cabos-p10-moletom-premium",
       "id": "cabo-p10"
     },
     {
